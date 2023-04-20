@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :app_booking_channels
   resources :appointment_statuses
   resources :appointments
   devise_for :users, path: 'api/auth', path_names: {
