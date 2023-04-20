@@ -46,6 +46,6 @@ class ClientReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def client_review_params
-      params.require(:client_review).permit(:user_account_id, :doctor_id, :is_review_anonymous, :wait_time_rating, :bedside_manner_rating, :overall_rating, :review, :is_doctor_recommended, :review_date)
+      params.require(:client_review).permit(:user_id, :doctor_id, :is_review_anonymous, :wait_time_rating, :bedside_manner_rating, :overall_rating, :review, :is_doctor_recommended, :review_date)
     end
 end

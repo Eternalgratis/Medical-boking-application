@@ -1,7 +1,7 @@
 class CreateHospitalAffiliations < ActiveRecord::Migration[7.0]
   def change
     create_table :hospital_affiliations do |t|
-      t.integer :doctor_id
+      t.references :doctor, null: false, foreign_key: true
       t.string :hospital_name
       t.string :city
       t.string :country

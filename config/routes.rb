@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
+  resources :offices
+  resources :client_reviews
+  resources :appointments
+  resources :hospital_affiliations
   resources :specializations
   resources :qualifications
   resources :office_doctor_availabilities
   resources :in_network_insurances
   resources :doctor_specializations
-  resources :hospital_affiliations
   resources :doctors
-  resources :offices
-  resources :client_reviews
   resources :app_booking_channels
   resources :appointment_statuses
-  resources :appointments
   devise_for :users, path: 'api/auth', path_names: {
     sign_in: 'login',
     sign_out: 'logout',

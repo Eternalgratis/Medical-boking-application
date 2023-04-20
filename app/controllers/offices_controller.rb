@@ -46,6 +46,6 @@ class OfficesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def office_params
-      params.require(:office).permit(:doctor_id, :hospital_affiliation_id, :time_slot_per_client_in_min, :first_consultation_fee, :followup_consultation_fee, :street_address, :city, :state, :country, :zip)
+      params.require(:office).permit(:doctor_id, :hospital_affiliation_id, :time_slot_per_client_in_min, :first_consultation_fee, :followup_consultation_fee, :street_address, :country, :state, :city, :zip)
     end
 end
