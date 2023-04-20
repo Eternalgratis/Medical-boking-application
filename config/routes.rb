@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :appointment_statuses
+  resources :appointments
   devise_for :users, path: 'api/auth', path_names: {
     sign_in: 'login',
     sign_out: 'logout',
