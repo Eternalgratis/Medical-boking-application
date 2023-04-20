@@ -1,0 +1,2 @@
+class InNetworkInsurance < ApplicationRecord
+end
