@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :specializations
   resources :qualifications
   resources :office_doctor_availabilities
   resources :in_network_insurances
