@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  resources :appointments
   resources :qualifications
   resources :office_doctor_availabilities
   resources :in_network_insurances
   resources :doctor_specializations
   resources :offices
   resources :client_reviews
-  resources :appointments
   resources :hospital_affiliations
   resources :specializations
   resources :doctors
