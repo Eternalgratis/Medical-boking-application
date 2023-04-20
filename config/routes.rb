@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :offices
   resources :client_reviews
   resources :app_booking_channels
   resources :appointment_statuses
