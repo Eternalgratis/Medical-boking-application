@@ -1,0 +1,2 @@
+class OfficeDoctorAvailability < ApplicationRecord
+end
