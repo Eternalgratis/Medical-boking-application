@@ -46,6 +46,6 @@ class InNetworkInsurancesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def in_network_insurance_params
-      params.require(:in_network_insurance).permit(:insurance_name, :office_id)
+      params.require(:in_network_insurance).permit(:office_id, :insurance_name)
     end
 end
