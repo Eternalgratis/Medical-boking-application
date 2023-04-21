@@ -8,52 +8,52 @@
 #     )
 # end
 
-10.times do
-    ClientReview.create!(
-        user_id: User.all.sample.id,
-        doctor_id: Doctor.all.sample.id,
-        is_review_anonymous: User.all.sample.name,
-        wait_time_rating: Faker::Rating.rand(1..10),
-        bedside_manner_rating: Faker::Rating.rand(1..10),
-        overall_rating: Faker::Rating.rand(1..10),
-        review: "Exceptional service! All my concerns were addressed with calmness and attention. Such a pleasant doctor!",
-        is_doctor_recommended: "Yes",
-        review_date: Faker::Date.in_date_period
-    )
-end
+# 10.times do
+#     ClientReview.create!(
+#         user_id: Faker::Number.unique.between(from: 1, to: 100),
+#         doctor_id: Faker::Number.unique.between(from: 1, to: 100),
+#         is_review_anonymous: Faker::Boolean.boolean,
+#         wait_time_rating: Faker::Number.between(from: 1, to: 5),
+#         bedside_manner_rating: Faker::Number.between(from: 1, to: 5),
+#         overall_rating: Faker::Number.between(from: 1, to: 5),
+#         review: Faker::Lorem.paragraph,
+#         is_doctor_recommended: Faker::Boolean.boolean,
+#         review_date: Faker::Date.between(from: 1.year.ago, to: Date.today)
+#     )
+# end
 
-10.times do
-    Appointment.create!(
-        user_id: User.all.sample.id,
-        office_id: Office.all.sample.id,
-        probable_start_time: Faker::Time.forward(days: 5,  period: :evening, format: :long),
-        actual_end_time: Faker::Time.forward(days: 5,  period: :evening, format: :long),
-        appointment_status_id: AppointmentStatus.all.sample.id,
-        appointment_taken_date: Faker::Date.forward(days: 23),
-        app_booking_channel_id: AppBookingChannel.all.sample.id
-    )
-end
+# 10.times do
+#     Appointment.create!(
+#         user_id: User.all.sample.id,
+#         office_id: Office.all.sample.id,
+#         probable_start_time: Faker::Time.forward(days: 5,  period: :evening, format: :long),
+#         actual_end_time: Faker::Time.forward(days: 5,  period: :evening, format: :long),
+#         appointment_status_id: AppointmentStatus.all.sample.id,
+#         appointment_taken_date: Faker::Date.forward(days: 23),
+#         app_booking_channel_id: AppBookingChannel.all.sample.id
+#     )
+# end
 
-3.times do
-    AppointmentStatus.create!(
-        status:( "Seen" "Unseen")
-    )
-end
+# 3.times do
+#     AppointmentStatus.create!(
+#         status:( "Seen" "Unseen")
+#     )
+# end
 
-5.timmes do
-    AppBookingChannel.create!(
-        app_booking_channel_name: Faker::App.name
-    )
-end
+# 5.timmes do
+#     AppBookingChannel.create!(
+#         app_booking_channel_name: Faker::App.name
+#     )
+# end
 
-5.times do
-    Doctor.create!(
-        first_name: Faker::Name.name,
-        last_name: Faker::Name.name,
-        professioal_statement: Faker::Educator.degree,
-        practicing_from: Faker::Date.in_date_period 
-    )
-end
+# 5.times do
+#     Doctor.create!(
+#         first_name:  Faker::Name.first_name,
+#         last_name: Faker::Name.last_name,
+#         professional_statement: Faker::Lorem.sentence,
+#         practicing_from: Faker::Date.between(from: 30.years.ago, to: Date.today) 
+#     )
+# end
 
 5.times do
     Office.create!(

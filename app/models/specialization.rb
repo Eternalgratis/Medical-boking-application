@@ -1,4 +1,5 @@
 class Specialization < ApplicationRecord
-    belongs_to :doctor through: :doctor_specialization
+    has_many :doctor_specialization
+    belongs_to :doctor, through: :doctor_specialization
     validates :specialization_name
 end
