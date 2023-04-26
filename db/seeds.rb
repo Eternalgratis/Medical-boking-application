@@ -117,7 +117,7 @@ end
 
 10.times do
     InNetworkInsurance.create!(
-        insurance_name: Faker::Insurance.company,
+        insurance_name: Faker::Company.name,
         office_id: rand(1..10)
     )
 end
