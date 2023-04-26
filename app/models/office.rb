@@ -1,6 +1,6 @@
 class Office < ApplicationRecord
   belongs_to :doctor
-  belongs_to :hospital_affiliation
+  belongs_to :hospital_affiliation 
   has_many :office_doctor_availabilities
   has_many :in_network_insurances 
   has_many :appointments
