@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/current_user', to: 'current_user#index'
+  post '/current_user', to: 'users#current_user'
   resources :appointments
   resources :qualifications
   resources :office_doctor_availabilities
